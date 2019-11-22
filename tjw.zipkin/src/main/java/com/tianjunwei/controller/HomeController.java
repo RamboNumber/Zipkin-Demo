@@ -54,17 +54,17 @@ public class HomeController {
 		ResultSet resultSet = null;
 
 		try {
-			String url = "jdbc:mysql://localhost:3306/tian?user=root&password=root&useUnicode=true&characterEncoding=UTF8&statementInterceptors=brave.mysql.TracingStatementInterceptor&zipkinServiceName=myDatabaseService";
+			String url = "jdbc:mysql://localhost:3306/text?user=root&password=root&useUnicode=true&characterEncoding=UTF8&statementInterceptors=brave.mysql.TracingStatementInterceptor&zipkinServiceName=myDatabaseService";
 			connection = DriverManager.getConnection(url);
 			System.out.println("成功获取连接");
 
 			statement = connection.createStatement();
-			String sql = "select * from tbl_user";
+			String sql = "select * from user";
 			resultSet = statement.executeQuery(sql);
 
 			resultSet.beforeFirst();
 			while (resultSet.next()) {
-				System.out.println(resultSet.getString(1));
+				System.out.println(resultSet.getString(""));
 			}
 			System.out.println("成功操作数据库");
 		} catch(Throwable t) {

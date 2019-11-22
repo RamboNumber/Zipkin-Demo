@@ -20,7 +20,7 @@ public class HomeController {
 	@Autowired 
 	RestTemplate restTemplate;
 	
-	 @RequestMapping("tar")
+	@RequestMapping("tar")
 	public String tar() throws InterruptedException, IOException { //service4 method
 	 		logger.info("tar");
 	        Random random = new Random();

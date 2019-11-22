@@ -36,10 +36,10 @@ import zipkin2.reporter.okhttp3.OkHttpSender;
 public class TracingConfiguration extends WebMvcConfigurerAdapter {
 
 	
-	@Bean
-	public DelegatingTracingFilter getDelegatingTracingFilter() {
-		return new DelegatingTracingFilter();
-	}
+    @Bean
+    public DelegatingTracingFilter getDelegatingTracingFilter() {
+        return new DelegatingTracingFilter();
+    }
 	
   @Bean 
   Sender sender() {
